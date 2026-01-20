@@ -1,22 +1,27 @@
+'use client'
+
+import { Navigation } from '@/app/components/Navigation'
+import { HeroSection } from '@/app/components/HeroSection'
+import { SocialProofBar } from '@/app/components/SocialProofBar'
+import { FeaturesSection } from '@/app/components/FeaturesSection'
+import { AppVortexSection } from '@/app/components/AppVortexSection'
+import { HowItWorksSection } from '@/app/components/HowItWorksSection'
+import { TrustPrivacySection } from '@/app/components/TrustPrivacySection'
+import { FinalCTASection } from '@/app/components/FinalCTASection'
+import { Footer } from '@/app/components/Footer'
+
 export default function Home() {
   return (
-    <main style={{
-      minHeight: '100vh',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      padding: '2rem',
-      fontFamily: 'system-ui, -apple-system, sans-serif'
-    }}>
-      <h1 style={{ fontSize: '3rem', marginBottom: '1rem' }}>ThreadByte</h1>
-      <p style={{ fontSize: '1.25rem', color: '#666', textAlign: 'center', maxWidth: '600px' }}>
-        Your unified daily digest application. Aggregating content from Slack, Gmail, and GroupMe
-        with AI-powered action drafts.
-      </p>
-      <div style={{ marginTop: '2rem', color: '#999' }}>
-        Coming soon...
-      </div>
-    </main>
+    <div className="min-h-screen bg-[#0F172A] font-['Inter',sans-serif] antialiased">
+      <Navigation />
+      <HeroSection />
+      <SocialProofBar />
+      <FeaturesSection />
+      <AppVortexSection />
+      <HowItWorksSection />
+      <TrustPrivacySection />
+      <FinalCTASection />
+      <Footer />
+    </div>
   )
 }

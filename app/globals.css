@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-size: 16px;
+
+  /* CommCove Brand Colors - Glacier/Sky Theme */
+  --action-blue: #0EA5E9;
+  --accent-cyan: #38BDF8;
+  --light-blue: #7DD3FC;
+  --deep-navy: #0F172A;
+  --dark-slate: #1E293B;
+  --medium-slate: #334155;
+  --white: #FFFFFF;
+  --light-gray: #94A3B8;
+  --success-green: #10B981;
+  --warning-red: #EF4444;
+
+  /* Default theme variables (for compatibility) */
+  --background: #0F172A;
+  --foreground: #FFFFFF;
+  --card: #1E293B;
+  --card-foreground: #FFFFFF;
+  --popover: #1E293B;
+  --popover-foreground: #FFFFFF;
+  --primary: #0EA5E9;
+  --primary-foreground: #FFFFFF;
+  --secondary: #334155;
+  --secondary-foreground: #FFFFFF;
+  --muted: #1E293B;
+  --muted-foreground: #94A3B8;
+  --accent: #38BDF8;
+  --accent-foreground: #FFFFFF;
+  --destructive: #EF4444;
+  --destructive-foreground: #FFFFFF;
+  --border: #334155;
+  --input: transparent;
+  --input-background: #0F172A;
+  --switch-background: #334155;
+  --font-weight-medium: 600;
+  --font-weight-normal: 400;
+  --ring: #38BDF8;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  /* macOS-specific styles */
+  .macos-window {
+    will-change: transform, opacity;
+  }
+
+  /* Smooth scrolling for digest content */
+  .digest-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(148, 163, 184, 0.3) transparent;
+  }
+
+  .digest-scroll::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .digest-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .digest-scroll::-webkit-scrollbar-thumb {
+    background-color: rgba(148, 163, 184, 0.3);
+    border-radius: 4px;
+  }
+
+  .digest-scroll::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(148, 163, 184, 0.5);
+  }
+
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}

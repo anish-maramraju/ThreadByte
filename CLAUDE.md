@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-**ThreadByte** (also called ThreadSync) is a unified daily digest application that aggregates content from multiple communication platforms (Slack, Gmail, and GroupMe) and generates AI-powered action drafts. The goal is to eliminate platform hunting by providing organized summaries and starter templates for emails, documents, and to-dos.
+**CommCove** is a unified daily digest application that aggregates content from multiple communication platforms (Slack, Gmail, and GroupMe) and generates AI-powered action drafts. The goal is to eliminate platform hunting by providing organized summaries and starter templates for emails, documents, and to-dos.
 
 ## Current Project State
 
